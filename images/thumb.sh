@@ -9,7 +9,7 @@ for FILE in `ls ./things/*/*.jpg`; do
 	echo $FILE
 	FILE2=`echo $FILE|sed -e "s|things|things_small|g"`
 	echo $FILE2
-	convert $FILE -resize 30% $FILE2
+	convert $FILE -resize 300 $FILE2
 done
 
 #convert $1 -resize $3 -gravity center -crop 800x500+0+0 $2
