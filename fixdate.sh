@@ -3,7 +3,7 @@ SOURCEDIR=./_posts0
 TARGETDIR=./_posts
 rm -rf $TARGETDIR
 mkdir $TARGETDIR
-NEWDATE=$1
+NEWDATE=`date -d "yesterday 13:00" +%Y-%m-%d`
 for FILE in `ls $SOURCEDIR/*.markdown`; do
 	FNAME=`echo $FILE|sed -e "s|.*/||g"`
 	#echo $FNAME
